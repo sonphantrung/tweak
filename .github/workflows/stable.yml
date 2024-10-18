@@ -46,7 +46,7 @@ jobs:
       
       - name: Download Discord IPA
         run: |
-          curl -L ${{ inputs.discord_ipa_url }} -o ${{ github.workspace }}/Discord.ipa
+          wget ${{ inputs.discord_ipa_url }} --no-verbose -O ${{ github.workspace }}/Discord.ipa
 
       - name: Patch Discord
         run : |
